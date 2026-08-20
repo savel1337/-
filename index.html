@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио | Специалист по охране труда</title>
+    <!-- Подключаем библиотеку для QR-кода -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #f4f7fc;
+            color: #1e2a3a;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #0b2a4a;
+        }
+        .subhead {
+            font-size: 1.2rem;
+            color: #2c5f7a;
+            border-left: 5px solid #2a7faa;
+            padding-left: 16px;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-top: 35px;
+        }
+        .section h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            border-bottom: 3px solid #d0e2f0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            color: #153b55;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #f9fbfd;
+            border-radius: 16px;
+            padding: 18px 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            transition: 0.2s;
+            border: 1px solid #e6edf4;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #7fadcc;
+        }
+        .card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a4058;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #2f4c66;
+            margin: 6px 0 10px;
+        }
+        .badge {
+            display: inline-block;
+            background: #1f6390;
+            color: white;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+        }
+        .badge.green {
+            background: #2d7d5a;
+        }
+        a {
+            color: #1f6390;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .qr-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin-top: 10px;
+        }
+        #qrcode {
+            background: white;
+            padding: 12px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            display: inline-block;
+        }
+        .qr-info {
+            flex: 1;
+        }
+        .qr-info p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .footer {
+            margin-top: 40px;
+            color: #6b859e;
+            font-size: 0.85rem;
+            text-align: center;
+            border-top: 1px solid #dce7f0;
+            padding-top: 25px;
+        }
+        .doc-list {
+            list-style: none;
+        }
+        .doc-list li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #dce7f0;
+            display: flex;
+            justify-content: space-between;
+        }
+        .doc-list a {
+            color: #1f6390;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 25px 15px; }
+            h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Шапка -->
+    <h1>Иван Петров</h1>
+    <div class="subhead">Специалист по охране труда • 7 лет опыта</div>
+    <!--О себе -->
+    <div class="section">
+        <h2>Обо мне</h2>
+        <p style="font-size:1.05rem; line-height:1.6;">
+            Обеспечение безопасности на производстве — моя профессия и призвание. Провожу обучение, 
+            разрабатываю инструкции, провожу специальную оценку условий труда (СОУТ). Постоянно повышаю 
+            квалификацию, слежу за изменениями в законодательстве.
+        </p>
+    </div>
+    <!-- Документы: курсы, удостоверения, охрана труда -->
+    <div class="section">
+        <h2>📄 Документы и сертификаты</h2>
+        <h3 style="margin-top:20px; font-weight:500; color:#0b2a4a;">Повышение квалификации</h3>
+        <ul class="doc-list">
+            <li><span>✅ Охрана труда на высоте (2025)</span> <a href="#">Скачать PDF</a></li>
+            <li><span>✅ Пожарно-технический минимум (2024)</span> <a href="#">Скачать PDF</a></li>
+            <li><span>✅ Электробезопасность (III группа)</span> <a href="#">Скачать PDF</a></li>
+        </ul>
+        <h3 style="margin-top:25px; font-weight:500; color:#0b2a4a;">Удостоверения</h3>
+        <ul class="doc-list">
+            <li><span>🪪 Удостоверение по охране труда (действительно до 2027)</span> <a href="#">Посмотреть</a></li>
+            <li><span>🪪 Удостоверение по промышленной безопасности</span> <a href="#">Посмотреть</a></li>
+        </ul>
+        <h3 style="margin-top:25px; font-weight:500; color:#0b2a4a;">Спецоценка (СОУТ)</h3>
+        <ul class="doc-list">
+            <li><span>📊 Отчёт СОУТ — цех №3 (2024)</span> <a href="#">Скачать</a></li>
+            <li><span>📊 Карта специальной оценки — участок №5</span> <a href="#">Скачать</a></li>
+        </ul>
+    </div>
+    <!-- Контакты и QR-код -->
+    <div class="section">
+        <h2>📬 Контакты & QR-код</h2>
+        <div class="qr-row">
+            <div id="qrcode"></div>
+            <div class="qr-info">
+                <p><strong>Сканируйте QR-код</strong>, чтобы открыть эту страницу на любом устройстве.</p>
+                <p style="font-size:0.9rem; color:#2f4c66;">
+                    Ссылка: <span id="pageUrl">(ваш URL)</span>
+                </p>
+                <p style="font-size:0.9rem; margin-top:12px;">
+                    📧 <a href="petrov@example.com">petrov@example.com</a>  |  
+                    📞 <a href="tel:+79123456789">+7 912 345-67-89</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        © 2026 Иван Петров • Все документы представлены в ознакомительных целях
+    </div>
+</div>
+<script>
+    (function() {
+        // Автоматически подставляем текущий адрес страницы
+        const url = window.location.href;
+        document.getElementById('pageUrl').textContent = url;
+        // Генерируем QR-код
+        const qrContainer = document.getElementById('qrcode');
+        // Очищаем, если уже есть
+        qrContainer.innerHTML = '';
+        // Размер и параметры
+        new QRCode(qrContainer, {
+            text: url,
+            width: 160,
+            height: 160,
+            colorDark: '#0b2a4a',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    })();
+</script>
+</body>
+</html>
+
